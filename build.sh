@@ -1,18 +1,23 @@
 #!/bin/bash
 
+# Run pkg-config with the modules in the BUILD_PKG_CONFIG_MODULES environment variable, if this 
+# variable exists.
+function pkg_config_flags {
+    if [[ -n "$BUILD_PKG_CONFIG_MODULES" ]]; then
+        pkg-config --libs --cflags $BUILD_PKG_CONFIG_MODULES
+    fi
+}
+
 function build_linux_macos()
 {
-  #g++ pilot_episode.cpp -lSDL2 -o pilot_episode
-  #g++ pilot_episode.cpp -lncurses -o pilot_episode
-  #export XDG_RUNTIME_DIR=/tmp
   echo "Building for Linux / MacOS target..."
   mkdir -p bin_linux
-  build_cmd="g++ $1.cpp -o ./bin_linux/$1 -std=c++2a -O3 $2"
+  build_cmd="g++ $1.cpp -o ./bin_linux/$1 -std=c++2a -O2 $(pkg_config_flags) $2"
   echo $build_cmd
+
   $build_cmd
-  #g++ $1.cpp -o ./bin_linux/$1 -std=c++2a -O3 $2
+
   echo "Done."
-  #./pilot_episode
 }
 
 function build_windows()
