@@ -8,13 +8,37 @@ function pkg_config_flags {
     fi
 }
 
+function generate_clangd_compile_commands {
+    local cmd="$1"
+    local build_dir="$2"
+    local build_file="$3"
+
+    # Here we escape " and \ in $cmd
+    local cmd_escaped="$(sed 's/\(["\]\)/\\\1/g' <<< "$cmd")"
+
+    # heredoc so no indentation
+cat >"$build_dir/compile_commands.json" <<- EOF
+[
+    {
+        "directory": "$PWD", "file": "$build_file",
+        "command": "$cmd_escaped"
+    }
+]
+EOF
+
+}
+
 function build_linux_macos()
 {
   echo "Building for Linux / MacOS target..."
   mkdir -p bin_linux
+  
   build_cmd="g++ $1.cpp -o ./bin_linux/$1 -std=c++2a -O2 $(pkg_config_flags) $2"
-  echo $build_cmd
+  
+  # Generate compile database before building, so that clangd can also highlight build errors.
+  generate_clangd_compile_commands "$build_cmd" bin_linux "$1.cpp"
 
+  echo $build_cmd
   $build_cmd
 
   echo "Done."
