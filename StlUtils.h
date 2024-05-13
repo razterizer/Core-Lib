@@ -81,6 +81,12 @@ namespace stlutils
     std::transform(cA.begin(), cA.end(), cB.begin(), ret.begin(), std::multiplies<typename Cont::value_type>());
     return ret;
   }
+  
+  template<typename Cont>
+  Cont comp_sq(const Cont& c)
+  {
+    return comp_prod(c, c);
+  }
 
   template<typename T>
   std::vector<std::vector<T>> comp_prod(const std::vector<std::vector<T>>& vA,
