@@ -60,6 +60,16 @@ namespace stlutils
     auto s = sum(c);
     return static_cast<RetT>(s)/static_cast<RetT>(N);
   }
+  
+  template<typename Cont>
+  typename Cont::value_type prod(const Cont& c)
+  {
+    if (c.empty())
+      return static_cast<typename Cont::value_type>(1);
+    return std::accumulate(std::begin(c), std::end(c),
+      static_cast<typename Cont::value_type>(1),
+      std::multiplies<typename Cont::value_type>());
+  }
 
   template<typename Cont>
   Cont comp_prod(const Cont& cA, const Cont& cB)
