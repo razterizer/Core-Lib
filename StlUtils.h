@@ -238,7 +238,7 @@ namespace stlutils
   {
     Cont ret = c;
     for (auto& v : ret)
-      v += s;
+      v -= s;
     return ret;
   }
 
