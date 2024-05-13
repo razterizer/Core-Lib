@@ -130,6 +130,15 @@ namespace stlutils
         v *= s;
     return ret;
   }
+  
+  template<typename Cont>
+  Cont scalar_div(typename Cont::value_type s, const Cont& c)
+  {
+    Cont ret = c;
+    for (auto& v : ret)
+      v = s / v;
+    return ret;
+  }
 
   template<typename Cont>
   Cont add(const Cont& cA, const Cont& cB)
