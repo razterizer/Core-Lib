@@ -251,6 +251,25 @@ namespace stlutils
         v -= s;
     return ret;
   }
+  
+  template<typename Cont>
+  Cont scalar_subtract(typename Cont::value_type s, const Cont& c)
+  {
+    Cont ret = c;
+    for (auto& v : ret)
+      v = s - v;
+    return ret;
+  }
+  
+  template<typename Cont>
+  Cont unary_minus(const Cont& c)
+  {
+    auto N = c.size();
+    Cont ret(N, static_cast<typename Cont::value_type>(0));
+    for (size_t i = 0; i < N; ++i)
+      ret[i] = -c[i];
+    return ret;
+  }
 
   template<typename Cont>
   typename Cont::value_type dot(const Cont& cA, const Cont& cB)
