@@ -358,24 +358,6 @@ namespace stlutils
     }
     return indices;
   }
-  
-  template<typename Cont>
-  std::optional<typename Cont::value_type> max_element_val(const Cont& c)
-  {
-    auto it = std::max_element(c.begin(), c.end());
-    if (it == c.end())
-      return std::nullopt;
-    return *it;
-  }
-  
-  template<typename Cont>
-  std::optional<typename Cont::value_type> min_element_val(const Cont& c)
-  {
-    auto it = std::min_element(c.begin(), c.end());
-    if (it == c.end())
-      return std::nullopt;
-    return *it;
-  }
 
   template<typename Cont>
   Cont cat(const Cont& c) { return c; }
