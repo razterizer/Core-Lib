@@ -370,6 +370,16 @@ namespace stlutils
     ret.insert(ret.end(), ci.begin(), ci.end());
     return ret;
   }
+  
+  template<typename Cont>
+  void append(Cont& c) {}
+  
+  template<typename Cont, typename ... ContN>
+  void append(Cont& c, ContN... cn)
+  {
+    auto ci = cat(cn...);
+    c.insert(c.end(), ci.begin(), ci.end());
+  }
 
   template<typename T>
   std::vector<T> repval(T val, size_t n)
