@@ -284,6 +284,26 @@ namespace stlutils
     auto cp = comp_prod(vA, vB);
     return sum(cp);
   }
+  
+  template<typename Cont>
+  Cont comp_sqrt(const Cont& c)
+  {
+    auto N = c.size();
+    Cont ret(N, static_cast<typename Cont::value_type>(0));
+    for (size_t i = 0; i < N; ++i)
+      ret[i] = sqrt(c[i]);
+    return ret;
+  }
+  
+  template<typename Tdst, typename Tsrc>
+  std::vector<Tdst> cast_vector(const std::vector<Tsrc>& v)
+  {
+    std::vector<Tdst> ret;
+    ret.reserve(v.size());
+    for (auto e : v)
+      ret.emplace_back(static_cast<Tdst>(e));
+    return ret;
+  }
 
   template<typename Cont>
   size_t max_element_idx(const Cont& c)
