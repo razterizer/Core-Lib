@@ -286,12 +286,32 @@ namespace stlutils
   }
   
   template<typename Cont>
-  Cont comp_sqrt(const Cont& c)
+  Cont sqrt(const Cont& c)
   {
     auto N = c.size();
     Cont ret(N, static_cast<typename Cont::value_type>(0));
     for (size_t i = 0; i < N; ++i)
-      ret[i] = sqrt(c[i]);
+      ret[i] = sqrt(c[i]); // #FIXME: Replace with std::sqrt().
+    return ret;
+  }
+  
+  template<typename Cont>
+  Cont sin(const Cont& c)
+  {
+    auto N = c.size();
+    Cont ret(N, static_cast<typename Cont::value_type>(0));
+    for (size_t i = 0; i < N; ++i)
+      ret[i] = std::sin(c[i]);
+    return ret;
+  }
+  
+  template<typename Cont>
+  Cont cos(const Cont& c)
+  {
+    auto N = c.size();
+    Cont ret(N, static_cast<typename Cont::value_type>(0));
+    for (size_t i = 0; i < N; ++i)
+      ret[i] = std::cos(c[i]);
     return ret;
   }
   
