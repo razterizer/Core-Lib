@@ -132,6 +132,17 @@ namespace stlutils
   }
   
   template<typename Cont>
+  Cont comp_div(const Cont& cA, const Cont& cB)
+  {
+    assert(cA.size() == cB.size());
+    if (cA.size() != cB.size())
+      return {};
+    Cont ret = cB;
+    std::transform(cA.begin(), cA.end(), cB.begin(), ret.begin(), std::divides<typename Cont::value_type>());
+    return ret;
+  }
+  
+  template<typename Cont>
   Cont scalar_div(typename Cont::value_type s, const Cont& c)
   {
     Cont ret = c;
