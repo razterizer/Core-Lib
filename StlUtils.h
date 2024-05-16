@@ -296,7 +296,7 @@ namespace stlutils
   }
   
   template<typename Tdst, typename Tsrc>
-  std::vector<Tdst> cast_vector(const std::vector<Tsrc>& v)
+  std::vector<Tdst> static_cast_vector(const std::vector<Tsrc>& v)
   {
     std::vector<Tdst> ret;
     ret.reserve(v.size());
