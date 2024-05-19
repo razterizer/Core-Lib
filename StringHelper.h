@@ -91,6 +91,26 @@ namespace str
   {
     return std::toupper(ch);
   }
+  
+  template<typename char_t>
+  std::basic_string<char_t> to_lower(const std::basic_string<char_t>& str)
+  {
+    std::basic_string<char_t> ret = str;
+    size_t len = str.length();
+    for (size_t c_idx = 0; c_idx < len; ++c_idx)
+      ret[c_idx] = to_lower(str[c_idx]);
+    return ret;
+  }
+  
+  template<typename char_t>
+  std::basic_string<char_t> to_upper(const std::basic_string<char_t>& str)
+  {
+    std::basic_string<char_t> ret = str;
+    size_t len = str.length();
+    for (size_t c_idx = 0; c_idx < len; ++c_idx)
+      ret[c_idx] = to_upper(str[c_idx]);
+    return ret;
+  }
 
   bool is_wovel(char ch)
   {
