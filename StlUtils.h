@@ -10,6 +10,7 @@
 #include <cstring>
 #include <assert.h>
 #include <algorithm>
+#include <functional>
 
 
 namespace stlutils
