@@ -9,18 +9,46 @@
 
 #include <fstream>
 #include <iostream>
-#include <string> 
+#include <string>
+#include <filesystem>
+
 
 namespace TextIO
 {
 
   bool read_file(const std::string& file_path, std::vector<std::string>& lines)
   {
+    if (!std::filesystem::exists(file_path) || !std::filesystem::is_regular_file(file_path))
+    {
+      std::cerr << "Error: File does not exist" << std::endl;
+      return false;
+    }
+    
     std::ifstream file(file_path);
     
     if (!file.is_open())
     {
-      std::cerr << "Error opening file \"" << file_path << "\"!" << std::endl;
+      std::cerr << "Error: Unable to open file \"" << file_path << "\"!" << std::endl;
+      file.close();
+      return false;
+    }
+    
+    if (file.eof())
+    {
+      std::cout << "Error: End of file reached." << std::endl;
+      file.close();
+      return false;
+    }
+    if (file.fail())
+    {
+      std::cerr << "Error: Non-fatal I/O error occurred." << std::endl;
+      file.close();
+      return false;
+    }
+    if (file.bad())
+    {
+      std::cerr << "Error: Fatal I/O error occurred." << std::endl;
+      file.close();
       return false;
     }
     
@@ -36,11 +64,37 @@ namespace TextIO
   
   bool write_file(const std::string& file_path, const std::vector<std::string>& lines)
   {
+    if (!std::filesystem::exists(file_path) || !std::filesystem::is_regular_file(file_path))
+    {
+      std::cerr << "Error: File does not exist" << std::endl;
+      return false;
+    }
+  
     std::ofstream file(file_path);
     
     if (!file.is_open())
     {
-      std::cerr << "Error opening file \"" << file_path << "\"!" << std::endl;
+      std::cerr << "Error: Unable to open file \"" << file_path << "\"!" << std::endl;
+      file.close();
+      return false;
+    }
+    
+    if (file.eof())
+    {
+      std::cout << "Error: End of file reached." << std::endl;
+      file.close();
+      return false;
+    }
+    if (file.fail())
+    {
+      std::cerr << "Error: Non-fatal I/O error occurred." << std::endl;
+      file.close();
+      return false;
+    }
+    if (file.bad())
+    {
+      std::cerr << "Error: Fatal I/O error occurred." << std::endl;
+      file.close();
       return false;
     }
     
