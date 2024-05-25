@@ -8,6 +8,7 @@
 //
 
 #pragma once
+#include "Math.h"
 #include <thread>
 #include <functional>
 
@@ -22,9 +23,9 @@ namespace Delay
     std::this_thread::sleep_for(std::chrono::microseconds(static_cast<int>(us)));
   }
 
-  void update_loop(int fps, std::function<bool(void)> update_func)
+  void update_loop(float fps, std::function<bool(void)> update_func)
   {
-    std::chrono::milliseconds frame_time(1000 / fps);
+    std::chrono::milliseconds frame_time(math::roundI(1000 / fps));
     auto last_time = std::chrono::steady_clock::now();
 
     while (true)
