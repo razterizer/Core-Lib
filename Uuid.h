@@ -1,3 +1,10 @@
+//
+//  Uuid.h
+//  Core
+//
+//  Created by Rasmus Anthin.
+//
+
 #pragma once
 
 #include <random>

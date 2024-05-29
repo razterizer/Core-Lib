@@ -1,3 +1,10 @@
+//
+//  StringHelper.h
+//  Core
+//
+//  Created by Rasmus Anthin.
+//
+
 #pragma once
 #include "Math.h"
 #include <string>

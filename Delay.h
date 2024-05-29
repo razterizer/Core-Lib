@@ -1,6 +1,6 @@
 //
 //  Delay.h
-//  Terminal Text Lib
+//  Core
 //
 //  Created by Rasmus Anthin on 2023-11-30.
 //  Cloned 2024-03-09 from the Terminal Text Lib.

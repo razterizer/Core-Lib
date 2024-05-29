@@ -1,3 +1,10 @@
+//
+//  OneShot.h
+//  Core
+//
+//  Created by Rasmus Anthin.
+//
+
 #pragma once
 
 class OneShot

@@ -1,3 +1,10 @@
+//
+//  Math.h
+//  Core
+//
+//  Created by Rasmus Anthin.
+//
+
 #pragma once
 #include <cstdlib>
 #include <vector>

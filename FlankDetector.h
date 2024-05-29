@@ -1,3 +1,10 @@
+//
+//  FlankDetector.h
+//  Core
+//
+//  Created by Rasmus Anthin.
+//
+
 #pragma once
 
 template<typename T = float>

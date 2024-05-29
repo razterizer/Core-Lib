@@ -1,6 +1,6 @@
 //
 //  StlUtils.h
-//  Core Lib
+//  Core
 //
 //  Created by Rasmus Anthin on 2022-11-19.
 //

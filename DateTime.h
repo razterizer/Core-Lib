@@ -1,3 +1,10 @@
+//
+//  DateTime.h
+//  Core
+//
+//  Created by Rasmus Anthin on 2022-11-08.
+//
+
 #pragma once
 #include "StringHelper.h"
 #include "Rand.h"
