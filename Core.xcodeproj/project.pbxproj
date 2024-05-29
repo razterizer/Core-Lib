@@ -61,6 +61,7 @@
 		07B17626291690F70057676B /* DateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTime.h; sourceTree = "<group>"; };
 		07B17627291690F70057676B /* OneShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneShot.h; sourceTree = "<group>"; };
 		07E6EA662C06956E007BBC6B /* StlOperators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StlOperators.h; sourceTree = "<group>"; };
+		07E6EA672C077F5D007BBC6B /* FolderHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FolderHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +135,7 @@
 				07778F1C29298DA70020DDB0 /* StlUtils.h */,
 				07E6EA662C06956E007BBC6B /* StlOperators.h */,
 				07B17622291690F70057676B /* StringHelper.h */,
+				07E6EA672C077F5D007BBC6B /* FolderHelper.h */,
 				078F2B652C011FAE00FF60F8 /* TextIO.h */,
 				07B17625291690F70057676B /* Uuid.h */,
 				070BE68C2B443FBE009D9BFB /* build.sh */,
