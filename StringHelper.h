@@ -263,5 +263,28 @@ namespace str
   {
     str.erase(remove_if(str.begin(), str.end(), isspace), str.end());
   }
+  
+  template<typename CharT = char>
+  std::vector<std::basic_string<CharT>> tokenize(const std::basic_string<CharT>& str, const std::vector<CharT>& delim)
+  {
+    std::vector<std::basic_string<CharT>> tokens;
+    std::basic_string<CharT> token;
+    std::size_t start = 0;
+    
+    for (std::size_t pos = 0; pos < str.size(); ++pos)
+    {
+      if (std::find(delim.begin(), delim.end(), str[pos]) != delim.end())
+      {
+        if (pos != start)
+          tokens.push_back(str.substr(start, pos - start));
+        start = pos + 1;
+      }
+    }
+    
+    if (start != str.size())
+      tokens.push_back(str.substr(start));
+    
+    return tokens;
+  }
 
 }
