@@ -7,6 +7,7 @@
 
 #pragma once
 #include "Math.h"
+#include "StlUtils.h"
 #include <string>
 #include <algorithm>
 
@@ -286,5 +287,51 @@ namespace str
     
     return tokens;
   }
-
+  
+  // min_scope_size : Allows you to ignore characters inside a scope regarded as scope_delim characters,
+  //                  but then your scopes have to contain strings no shorter than this limit.
+  template<typename CharT = char>
+  std::vector<std::basic_string<CharT>> tokenize(const std::basic_string<CharT>& str,
+                                                 const std::vector<CharT>& delim,
+                                                 const std::vector<CharT>& scope_delim,
+                                                 size_t min_scope_size = 1)
+  {
+    std::vector<std::basic_string<CharT>> tokens;
+    size_t start = 0;
+    bool in_scope = false;
+    
+    for (size_t pos = 0; pos < str.size(); ++pos)
+    {
+      if (in_scope)
+      {
+        if (pos >= start + min_scope_size && stlutils::contains(scope_delim, str[pos]))
+        {
+          tokens.emplace_back(str.substr(start, pos - start));
+          start = pos + 1;
+          in_scope = false;
+        }
+      }
+      else
+      {
+        if (stlutils::contains(scope_delim, str[pos]))
+        {
+          in_scope = true;
+          start = pos + 1;
+        }
+        else if (stlutils::contains(delim, str[pos]))
+        {
+          if (pos != start)
+            tokens.emplace_back(str.substr(start, pos - start));
+          start = pos + 1;
+        }
+      }
+    }
+    
+    if (start != str.size())
+      tokens.emplace_back(str.substr(start));
+    
+    return tokens;
+  }
+  
+  
 }
