@@ -13,6 +13,7 @@
 namespace utils
 {
 
+  // #NOTE: On Windows, you cannot use the %n format specifier as it is not supported.
   int sscanf(const char* str, const char* format, ...)
   {
     va_list args;
