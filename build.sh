@@ -33,7 +33,7 @@ function build_linux_macos()
   echo "Building for Linux / MacOS target..."
   mkdir -p bin
   
-  build_cmd="g++ $1.cpp -o ./bin/$1 -std=c++2a -O2 $(pkg_config_flags) $2"
+  build_cmd="g++ $1.cpp -o ./bin/$1 -std=c++2a -O2 $(pkg_config_flags) -Wall $2"
   
   # Generate compile database before building, so that clangd can also highlight build errors.
   generate_clangd_compile_commands "$build_cmd" bin "$1.cpp"
