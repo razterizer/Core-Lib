@@ -290,4 +290,6 @@ namespace math
     
     return a;
   }
+  
+  void toggle(bool& val) { val = !val; }
 }
