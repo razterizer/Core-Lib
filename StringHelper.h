@@ -122,7 +122,7 @@ namespace str
 
   bool is_wovel(char ch)
   {
-    auto chl = tolower(ch);
+    auto chl = to_lower(ch);
     const char ch_aring = '\xE5';
     const char ch_auml = '\xE4';
     const char ch_ouml = '\xF6';
