@@ -64,12 +64,6 @@ namespace TextIO
   
   bool write_file(const std::string& file_path, const std::vector<std::string>& lines)
   {
-    if (!std::filesystem::exists(file_path) || !std::filesystem::is_regular_file(file_path))
-    {
-      std::cerr << "Error: File does not exist" << std::endl;
-      return false;
-    }
-  
     std::ofstream file(file_path);
     
     if (!file.is_open())
