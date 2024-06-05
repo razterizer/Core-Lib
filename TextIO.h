@@ -93,7 +93,7 @@ namespace TextIO
     }
     
     for (const auto& l : lines)
-      file << l;
+      file << l << '\n';
     
     file.close();
     
