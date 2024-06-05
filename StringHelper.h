@@ -280,7 +280,7 @@ namespace str
   template<typename CharT = char>
   std::vector<std::basic_string<CharT>> tokenize(const std::basic_string<CharT>& str,
                                                  const std::vector<CharT>& delim,
-                                                 const std::vector<CharT>& scope_delim,
+                                                 const std::vector<CharT>& scope_delim = {},
                                                  size_t min_scope_size = 1)
   {
     std::vector<std::basic_string<CharT>> tokens;
