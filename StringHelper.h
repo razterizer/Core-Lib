@@ -129,6 +129,16 @@ namespace str
     std::vector<char> wovels { 'a', 'o', 'u', ch_aring, 'e', 'i', 'y', ch_auml, ch_ouml };
     return std::find(wovels.begin(), wovels.end(), chl) != wovels.end();
   }
+  
+  bool is_letter(char ch)
+  {
+    auto chl = to_lower(ch);
+    const char ch_aring = '\xE5';
+    const char ch_auml = '\xE4';
+    const char ch_ouml = '\xF6';
+    return ('a' <= chl && chl <= 'z')
+      || (ch == ch_aring) || (ch == ch_auml) || (ch == ch_ouml);
+  }
 
   std::string cat(const std::vector<std::string>& strings)
   {
