@@ -63,6 +63,7 @@
 		07E6EA662C06956E007BBC6B /* StlOperators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StlOperators.h; sourceTree = "<group>"; };
 		07E6EA672C077F5D007BBC6B /* FolderHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FolderHelper.h; sourceTree = "<group>"; };
 		07E6EA7B2C0A5C0F007BBC6B /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		07E6EAA82C114451007BBC6B /* LICENSE_mnist */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE_mnist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +89,7 @@
 		0711C9E5293C14460097F5D8 /* wichtounet_mnist_reader */ = {
 			isa = PBXGroup;
 			children = (
+				07E6EAA82C114451007BBC6B /* LICENSE_mnist */,
 				0711C9E1293C13DE0097F5D8 /* mnist_reader_common.h */,
 				0711C9E3293C140F0097F5D8 /* mnist_utils.h */,
 				0711C9E4293C14380097F5D8 /* mnist_reader.h */,
