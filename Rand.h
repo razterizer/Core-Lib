@@ -29,6 +29,12 @@ namespace rnd
     std::srand(scaled_shifted_time_s);
   }
   
+  // Silly wrapper for sake of completion.
+  void srand(unsigned int seed)
+  {
+    std::srand(seed);
+  }
+  
   // Uniform random value in range [0, 1].
   float rand()
   {
