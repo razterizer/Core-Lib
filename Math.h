@@ -90,9 +90,33 @@ namespace math
   }
   
   template<typename T>
+  T length_squared(T x, T y, T z)
+  {
+    return sq(x) + sq(y) + sq(z);
+  }
+  
+  template<typename T>
+  T length_squared(T x, T y, T z, T w)
+  {
+    return sq(x) + sq(y) + sq(z) + sq(w);
+  }
+  
+  template<typename T>
   T length(T x, T y)
   {
     return std::sqrt(length_squared(x, y));
+  }
+  
+  template<typename T>
+  T length(T x, T y, T z)
+  {
+    return std::sqrt(length_squared(x, y, z));
+  }
+  
+  template<typename T>
+  T length(T x, T y, T z, T w)
+  {
+    return std::sqrt(length_squared(x, y, z, w));
   }
 
   template<typename T>
@@ -102,11 +126,42 @@ namespace math
     auto diff_y = y1 - y0;
     return length_squared(diff_x, diff_y);
   }
+  
+  template<typename T>
+  T distance_squared(T x0, T y0, T z0, T x1, T y1, T z1)
+  {
+    auto diff_x = x1 - x0;
+    auto diff_y = y1 - y0;
+    auto diff_z = z1 - z0;
+    return length_squared(diff_x, diff_y, diff_z);
+  }
+  
+  template<typename T>
+  T distance_squared(T x0, T y0, T z0, T w0, T x1, T y1, T z1, T w1)
+  {
+    auto diff_x = x1 - x0;
+    auto diff_y = y1 - y0;
+    auto diff_z = z1 - z0;
+    auto diff_w = w1 - w0;
+    return length_squared(diff_x, diff_y, diff_z, diff_w);
+  }
 
   template<typename T>
   T distance(T x0, T y0, T x1, T y1)
   {
     return std::sqrt(distance_squared(x0, y0, x1, y1));
+  }
+  
+  template<typename T>
+  T distance(T x0, T y0, T z0, T x1, T y1, T z1)
+  {
+    return std::sqrt(distance_squared(x0, y0, z0, x1, y1, z1));
+  }
+  
+  template<typename T>
+  T distance(T x0, T y0, T z0, T w0, T x1, T y1, T z1, T w1)
+  {
+    return std::sqrt(distance_squared(x0, y0, z0, w0, x1, y1, z1, w1));
   }
   
   template<typename T>
@@ -117,6 +172,31 @@ namespace math
       return false;
     x /= len;
     y /= len;
+    return true;
+  }
+  
+  template<typename T>
+  bool normalize(T& x, T& y, T& z)
+  {
+    auto len = length(x, y, z);
+    if (len < 1e-10f)
+      return false;
+    x /= len;
+    y /= len;
+    z /= len;
+    return true;
+  }
+  
+  template<typename T>
+  bool normalize(T& x, T& y, T& z, T& w)
+  {
+    auto len = length(x, y, z, w);
+    if (len < 1e-10f)
+      return false;
+    x /= len;
+    y /= len;
+    z /= len;
+    w /= len;
     return true;
   }
   
