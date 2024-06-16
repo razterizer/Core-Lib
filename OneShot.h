@@ -23,6 +23,8 @@ public:
     return curr;
   }
   
+  bool was_triggered() const { return !val; }
+  
   void reset()
   {
     val = true;
