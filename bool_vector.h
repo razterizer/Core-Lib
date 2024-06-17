@@ -13,8 +13,15 @@ class Bool
   bool val = false;
 
 public:
+  Bool() = default;
+  Bool(bool v) : val(v) {}
+  Bool(const Bool& b) : val(b.val) {}
+
   operator bool() const { return val; }
   operator bool&() { return val; }
+  
+  bool operator==(Bool b) const { return val == b.val; }
+  bool operator!=(Bool b) const { return val == b.val; }
 };
 
 using bool_vector = std::vector<Bool>;
