@@ -60,6 +60,7 @@
 		07B17625291690F70057676B /* Uuid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Uuid.h; sourceTree = "<group>"; };
 		07B17626291690F70057676B /* DateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTime.h; sourceTree = "<group>"; };
 		07B17627291690F70057676B /* OneShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneShot.h; sourceTree = "<group>"; };
+		07C2A7812C20B89300869A56 /* bool_vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bool_vector.h; sourceTree = "<group>"; };
 		07E6EA662C06956E007BBC6B /* StlOperators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StlOperators.h; sourceTree = "<group>"; };
 		07E6EA672C077F5D007BBC6B /* FolderHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FolderHelper.h; sourceTree = "<group>"; };
 		07E6EA7B2C0A5C0F007BBC6B /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 				078F2B652C011FAE00FF60F8 /* TextIO.h */,
 				07E6EA7B2C0A5C0F007BBC6B /* Utils.h */,
 				07B17625291690F70057676B /* Uuid.h */,
+				07C2A7812C20B89300869A56 /* bool_vector.h */,
 				070BE68C2B443FBE009D9BFB /* build.sh */,
 				0723D8262938A15900C567B5 /* Tests */,
 				07B1761A29168F820057676B /* Products */,
