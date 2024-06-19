@@ -44,7 +44,7 @@ namespace folder
 
   std::string get_pwd()
   {
-    return std::filesystem::current_path();
+    return std::filesystem::current_path().string();
   }
   
   char get_path_separator()
