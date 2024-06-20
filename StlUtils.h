@@ -572,6 +572,15 @@ namespace stlutils
     return std::find(std::begin(c), std::end(c), val);
   }
   
+  template<typename Cont>
+  int find_idx(Cont& c, const typename Cont::value_type& val)
+  {
+    auto it = std::find(std::begin(c), std::end(c), val);
+    if (it == std::end(c))
+      return -1;
+    return static_cast<int>(std::distance(std::begin(c), it));
+  }
+  
   template<typename Cont, typename Lambda>
   bool contains_if(const Cont& c, Lambda pred)
   {
