@@ -611,6 +611,18 @@ namespace stlutils
     return true;
   }
   
+  template<typename Cont, typename Lambda>
+  bool erase_if(Cont& c, Lambda pred)
+  {
+    auto it = std::find_if(std::begin(c), std::end(c), pred);
+    if (it != std::end(c))
+    {
+      c.erase(it);
+      return true;
+    }
+    return false;
+  }
+  
   template<typename Cont>
   typename Cont::value_type try_get(const Cont& cont, int idx,
                                     typename Cont::value_type def_val = static_cast<typename Cont::value_type>(0))
