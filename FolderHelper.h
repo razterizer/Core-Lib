@@ -104,5 +104,10 @@ namespace folder
   {
     return basefilename_and_ext.first + '.' + basefilename_and_ext.second;
   }
+  
+  bool exists(const std::string file_path)
+  {
+    return std::filesystem::exists(file_path);
+  }
 
 }
