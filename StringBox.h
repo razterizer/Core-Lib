@@ -19,6 +19,7 @@ namespace str
   {
     std::vector<std::string> text_lines;
     
+    StringBox() = default;
     StringBox(size_t N) : text_lines(N) {}
     StringBox(const std::vector<std::string>& texts) : text_lines(texts) {}
     StringBox(const std::string& text)
