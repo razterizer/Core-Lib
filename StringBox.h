@@ -33,6 +33,8 @@ namespace str
       for (const auto& tl : text_lines)
         std::cout << tl << '\n';
     }
+    
+    size_t size() const { return text_lines.size(); }
   };
 
 }
