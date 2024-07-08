@@ -11,7 +11,7 @@
 		0711C9DF293C12810097F5D8 /* MNIST_Loader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0711C9DE293C12810097F5D8 /* MNIST_Loader.h */; };
 		0711C9E2293C13DE0097F5D8 /* mnist_reader_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 0711C9E1293C13DE0097F5D8 /* mnist_reader_common.h */; };
 		0723D81A2938835400C567B5 /* Histogram.h in Headers */ = {isa = PBXBuildFile; fileRef = 0732E0C4292CE80000014375 /* Histogram.h */; };
-		0723D81B2938835800C567B5 /* TextBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 0732E0C6292D3E7300014375 /* TextBox.h */; };
+		0723D81B2938835800C567B5 /* StringBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 0732E0C6292D3E7300014375 /* StringBox.h */; };
 		0723D81C2938835A00C567B5 /* MarkovChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 071F8F212924192B0052F33E /* MarkovChain.h */; };
 		0723D81D2938836400C567B5 /* ann_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0732E1102934494200014375 /* ann_utils.h */; };
 		0723D81E2938836900C567B5 /* StlUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 07778F1C29298DA70020DDB0 /* StlUtils.h */; };
@@ -43,7 +43,7 @@
 		0723D8272938A33C00C567B5 /* ann_dense.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ann_dense.h; sourceTree = "<group>"; };
 		0723D8292938C7C200C567B5 /* ann_cnn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ann_cnn.h; sourceTree = "<group>"; };
 		0732E0C4292CE80000014375 /* Histogram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Histogram.h; sourceTree = "<group>"; };
-		0732E0C6292D3E7300014375 /* TextBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextBox.h; sourceTree = "<group>"; };
+		0732E0C6292D3E7300014375 /* StringBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringBox.h; sourceTree = "<group>"; };
 		0732E1102934494200014375 /* ann_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ann_utils.h; sourceTree = "<group>"; };
 		0739D9BE2BA1D66000964E96 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0760B6EE2B9C61E00032CACD /* Delay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Delay.h; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				07B17626291690F70057676B /* DateTime.h */,
 				0760B6EE2B9C61E00032CACD /* Delay.h */,
 				0732E0C4292CE80000014375 /* Histogram.h */,
-				0732E0C6292D3E7300014375 /* TextBox.h */,
+				0732E0C6292D3E7300014375 /* StringBox.h */,
 				071F8F212924192B0052F33E /* MarkovChain.h */,
 				07B17624291690F70057676B /* FlankDetector.h */,
 				07B17621291690F70057676B /* Math.h */,
@@ -168,7 +168,7 @@
 				0723D81A2938835400C567B5 /* Histogram.h in Headers */,
 				0723D81E2938836900C567B5 /* StlUtils.h in Headers */,
 				0723D82A2938C7C200C567B5 /* ann_cnn.h in Headers */,
-				0723D81B2938835800C567B5 /* TextBox.h in Headers */,
+				0723D81B2938835800C567B5 /* StringBox.h in Headers */,
 				0723D81F2938836F00C567B5 /* DateTime_tests.h in Headers */,
 				07B1762A291690F70057676B /* StringHelper.h in Headers */,
 				07B1762B291690F70057676B /* Rand.h in Headers */,

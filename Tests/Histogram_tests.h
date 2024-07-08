@@ -16,8 +16,8 @@ namespace hist
     Histogram<float> hist(100, -4, 10);
     for (int i = 0; i < 100'000; ++i)
       hist += rnd::randn_clamp(0, 3, -4, 10);
-    auto tb_hist = hist.to_textbox(20, 80); //sh.num_cols());
-    tb_hist.print();
+    auto sb_hist = hist.to_stringbox(20, 80); //sh.num_cols());
+    sb_hist.print();
     int num_outside = hist.sanity_check_bucket_samples();
     if (num_outside > 0)
       std::cerr << num_outside << " samples in the wrong bucket!" << std::endl;

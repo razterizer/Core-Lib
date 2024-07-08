@@ -6,7 +6,7 @@
 //
 
 #pragma once
-#include "TextBox.h"
+#include "StringBox.h"
 
 
 constexpr std::size_t operator "" _sz(unsigned long long n) { return n; }
@@ -96,7 +96,7 @@ namespace hist
       rebuild();
     }
     
-    TextBox to_textbox(int nr, int nc)
+    StringBox to_stringbox(int nr, int nc)
     {
       auto hist = *this;
       hist.resize(nc, range_start, range_end);
@@ -111,10 +111,10 @@ namespace hist
         auto t = static_cast<float>(buck.samples.size())/max_num_samples;
         hist_bars[b_idx] = std::round(t * nr);
       }
-      TextBox tb(nr);
+      StringBox sb(nr);
       for (int r_idx = nr - 1; r_idx >= 0; --r_idx)
       {
-        auto& str = tb[r_idx];
+        auto& str = sb[r_idx];
         for (int c_idx = 0; c_idx < nc; ++c_idx)
         {
           if (nr - 1 - r_idx < hist_bars[c_idx])
@@ -123,7 +123,7 @@ namespace hist
             str += ' ';
         }
       }
-      return tb;
+      return sb;
     }
     
     // Returns number of samples in the wrong bucket.
