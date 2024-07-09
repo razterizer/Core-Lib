@@ -119,6 +119,11 @@ namespace str
       ret[c_idx] = to_upper(str[c_idx]);
     return ret;
   }
+  
+  bool is_digit(char ch)
+  {
+    return '0' <= ch && ch <= '9';
+  }
 
   bool is_wovel(char ch)
   {
