@@ -371,5 +371,9 @@ namespace math
     return a;
   }
   
-  void toggle(bool& val) { val = !val; }
+  bool toggle(bool& val)
+  {
+    val = !val;
+    return val;
+  }
 }
