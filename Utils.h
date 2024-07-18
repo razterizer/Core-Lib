@@ -13,21 +13,6 @@
 namespace utils
 {
 
-  // #NOTE: On Windows, you cannot use the %n format specifier as it is not supported.
-  int sscanf(const char* str, const char* format, ...)
-  {
-    va_list args;
-    va_start(args, format);
-    int result;
 
-#ifdef _WIN32
-    result = ::vsscanf_s(str, format, args);
-#else
-    result = ::vsscanf(str, format, args);
-#endif
-
-    va_end(args);
-    return result;
-  }
 
 }
