@@ -7,12 +7,19 @@
 
 
 #pragma once
-#include <cstdarg>  // For va_list, va_start, va_end
-#include <cstdio>   // For sscanf and sscanf_s
 
 namespace utils
 {
 
-
+  template<typename T>
+  bool try_set(T* dst, const T& src)
+  {
+    if (dst != nullptr)
+    {
+      *dst = src;
+      return true;
+    }
+    return false;
+  }
 
 }
