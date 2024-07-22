@@ -102,6 +102,12 @@ namespace rnd
                                                    static_cast<float>(max))));
   }
   
+  int randn_range_int(int lo, int hi)
+  {
+    return static_cast<int>(std::round(randn_range(static_cast<float>(lo),
+                                                   static_cast<float>(hi))));
+  }
+  
   template<typename EnumType>
   EnumType rand_enum()
   {
