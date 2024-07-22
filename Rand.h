@@ -85,6 +85,15 @@ namespace rnd
     } while (!math::in_range<float>(r, min, max, Range::Closed));
     return r;
   }
+  
+  // Since randn(mu, sigma) is the same as randn()*sigma + mu (Octave/Matlab),
+  //   we can then assume the limits are +/- sigma.
+  float randn_range(float lo, float hi)
+  {
+    auto mid = (lo + hi)*0.5f;
+    auto diff = hi - lo;
+    return randn(mid, diff);
+  };
 
   int randn_clamp_int(float mu, float sigma, int min, int max)
   {
