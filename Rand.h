@@ -218,7 +218,7 @@ namespace rnd
   }
   
   // Returns true if the dice of size N rolled a 1.
-  bool prob(int N)
+  bool one_in(int N)
   {
     return dice(N) == 1;
   }
