@@ -204,5 +204,16 @@ namespace rnd
                               static_cast<int>(values.size()) - 1);
     return values[idx];
   }
+  
+  int dice(int num_faces = 6)
+  {
+    return rand_int(1, num_faces);
+  }
+  
+  // Returns true if the dice of size N rolled a 1.
+  bool prob(int N)
+  {
+    return dice(N) == 1;
+  }
 
 }
