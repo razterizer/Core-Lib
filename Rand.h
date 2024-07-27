@@ -148,11 +148,18 @@ namespace rnd
     return static_cast<int>(std::round(rnd));
   }
   
+  int rand_idx(size_t N)
+  {
+    if (N == 0)
+      return -1;
+    return rand_int(0, static_cast<int>(N) - 1);
+  }
+  
   template<typename T>
   T rand_select(const std::vector<T>& values)
   {
     assert(!values.empty());
-    int idx = rand_int(0, static_cast<int>(values.size()) - 1);
+    int idx = rand_idx(values.size());
     return values[idx];
   }
   
