@@ -21,5 +21,13 @@ namespace utils
     }
     return false;
   }
+  
+  template<typename T>
+  T try_get(T* ptr, const T def_val = static_cast<T>(0))
+  {
+    if (ptr == nullptr)
+      return def_val;
+    return *ptr;
+  }
 
 }
