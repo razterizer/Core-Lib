@@ -94,6 +94,13 @@ namespace rnd
     auto diff = hi - lo;
     return randn(mid, diff);
   };
+  
+  float randn_range_clamp(float lo, float hi)
+  {
+    auto mid = (lo + hi)*0.5f;
+    auto diff = hi - lo;
+    return randn_clamp(mid, diff, lo, hi);
+  }
 
   int randn_clamp_int(float mu, float sigma, int min, int max)
   {
@@ -106,6 +113,12 @@ namespace rnd
   {
     return static_cast<int>(std::round(randn_range(static_cast<float>(lo),
                                                    static_cast<float>(hi))));
+  }
+  
+  int randn_range_clamp_int(int lo, int hi)
+  {
+    return static_cast<int>(std::round(randn_range_clamp(static_cast<float>(lo),
+                                                         static_cast<float>(hi))));
   }
   
   template<typename EnumType>
