@@ -16,7 +16,7 @@
 namespace rnd
 {
 
-  void srand_time()
+  unsigned int srand_time()
   {
     auto time_s = std::time(nullptr);
     // Don't lose least significant digits.
@@ -27,6 +27,7 @@ namespace rnd
     auto scaled_shifted_time_s = ui_shift_time_s * 3163; // Use prime number I guess.
     // Set seed.
     std::srand(scaled_shifted_time_s);
+    return scaled_shifted_time_s;
   }
   
   // Silly wrapper for sake of completion.
