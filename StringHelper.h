@@ -125,14 +125,14 @@ namespace str
     return '0' <= ch && ch <= '9';
   }
 
-  bool is_wovel(char ch)
+  bool is_vowel(char ch)
   {
     auto chl = to_lower(ch);
     const char ch_aring = '\xE5';
     const char ch_auml = '\xE4';
     const char ch_ouml = '\xF6';
-    std::vector<char> wovels { 'a', 'o', 'u', ch_aring, 'e', 'i', 'y', ch_auml, ch_ouml };
-    return std::find(wovels.begin(), wovels.end(), chl) != wovels.end();
+    std::vector<char> vowels { 'a', 'o', 'u', ch_aring, 'e', 'i', 'y', ch_auml, ch_ouml };
+    return std::find(vowels.begin(), vowels.end(), chl) != vowels.end();
   }
   
   bool is_letter(char ch)
