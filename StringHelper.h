@@ -280,6 +280,26 @@ namespace str
     str.erase(remove_if(str.begin(), str.end(), isspace), str.end());
   }
   
+  bool is_an(const std::string& str)
+  {
+    auto strl = trim_ret(to_lower(str));
+    if (strl.empty())
+      return false;
+    
+    char first_char = strl[0];
+
+    // Handling cases like "honest", "hour" where 'h' is silent.
+    if (first_char == 'h' && (strl.size() > 1 && strl[1] == 'o'))
+      return true;
+    
+    // Handling cases like "unicorn", "unique", "use", "usage case" where 'u' sounds like "you".
+    if (strl.starts_with("uni") || strl.starts_with("use") || strl.starts_with("usa"))
+      return false;
+
+    // Return true if the first character is a vowel.
+    return is_vowel(first_char);
+  }
+  
   // min_scope_size : Allows you to ignore characters inside a scope regarded as scope_delim characters,
   //                  but then your scopes have to contain strings no shorter than this limit.
   template<typename CharT = char>
