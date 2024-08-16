@@ -311,6 +311,12 @@ namespace str
     return is_vowel(ch0);
   }
   
+  // Returns input string (noun + rest of string) with prepended indefinite article.
+  std::string indef_art(const std::string str)
+  {
+    return std::string("") + (is_an(str) ? "an" : "a") + " " + str;
+  }
+  
   // min_scope_size : Allows you to ignore characters inside a scope regarded as scope_delim characters,
   //                  but then your scopes have to contain strings no shorter than this limit.
   template<typename CharT = char>
