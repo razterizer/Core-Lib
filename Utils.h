@@ -8,6 +8,8 @@
 
 #pragma once
 
+#define UNUSED(x) 
+
 namespace utils
 {
 
