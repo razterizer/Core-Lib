@@ -31,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0709B9AD2C700B2B00A43834 /* EventBroadcaster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventBroadcaster.h; sourceTree = "<group>"; };
 		070BE68C2B443FBE009D9BFB /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		0711C9DC293BD69F0097F5D8 /* LeNet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeNet.h; sourceTree = "<group>"; };
 		0711C9DE293C12810097F5D8 /* MNIST_Loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNIST_Loader.h; sourceTree = "<group>"; };
@@ -78,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0709B9AE2C700B4400A43834 /* events */ = {
+			isa = PBXGroup;
+			children = (
+				0709B9AD2C700B2B00A43834 /* EventBroadcaster.h */,
+			);
+			path = events;
+			sourceTree = "<group>";
+		};
 		0711C9E0293C13970097F5D8 /* MNIST */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +153,7 @@
 				07E6EA7B2C0A5C0F007BBC6B /* Utils.h */,
 				07B17625291690F70057676B /* Uuid.h */,
 				07C2A7812C20B89300869A56 /* bool_vector.h */,
+				0709B9AE2C700B4400A43834 /* events */,
 				070BE68C2B443FBE009D9BFB /* build.sh */,
 				0723D8262938A15900C567B5 /* Tests */,
 				07B1761A29168F820057676B /* Products */,
