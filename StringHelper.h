@@ -286,10 +286,21 @@ namespace str
     if (strl.empty())
       return false;
     
-    char first_char = strl[0];
+    char ch0 = strl[0];
+    auto N = strl.size();
+    char ch1 = N > 1 ? strl[1] : '?';
+    
+    // Handling cases like "ymca".
+    if (ch0 == 'y' && (N > 1 && is_vowel(ch1)))
+      return false;
+    
+    // Handling cases like "npc". Consonant after 'n'. Starting consonants like 'f' [ef], 'n' [en], 'r' [ar] etc.
+    if (ch0 == 'f' || ch0 == 'l' || ch0 == 'm' || ch0 == 'n' || ch0 == 'r' || ch0 == 's' || ch0 == 'x')
+      if (N > 1 && !is_vowel(ch1))
+        return true;
 
     // Handling cases like "honest", "hour" where 'h' is silent.
-    if (first_char == 'h' && (strl.size() > 1 && strl[1] == 'o'))
+    if (ch0 == 'h' && (N > 1 && ch1 == 'o'))
       return true;
     
     // Handling cases like "unicorn", "unique", "use", "usage case" where 'u' sounds like "you".
@@ -297,7 +308,7 @@ namespace str
       return false;
 
     // Return true if the first character is a vowel.
-    return is_vowel(first_char);
+    return is_vowel(ch0);
   }
   
   // min_scope_size : Allows you to ignore characters inside a scope regarded as scope_delim characters,
