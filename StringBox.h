@@ -36,6 +36,8 @@ namespace str
     }
     
     size_t size() const { return text_lines.size(); }
+    
+    bool empty() const noexcept { return text_lines.empty(); }
   };
 
 }
