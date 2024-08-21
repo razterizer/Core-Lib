@@ -631,5 +631,18 @@ namespace stlutils
       return cont[idx];
     return def_val;
   }
+  
+  template<typename T>
+  T& at_growing(std::vector<T>& vec, int idx, T default_val = {})
+  {
+    if (idx < 0)
+    {
+      std::cerr << "ERROR in stlutils::at_growing() : Index cannot be negative!" << std::endl;
+      idx = 0;
+    }
+    if (idx >= static_cast<int>(vec.size()))
+      vec.resize(idx + 1, default_val);
+    return vec[idx];
+  }
 
 }
