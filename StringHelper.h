@@ -318,6 +318,13 @@ namespace str
     return std::string("") + (is_an(str) ? "an" : "a") + " " + str;
   }
   
+  // Makes sure the first letter of the string is in uppercase.
+  std::string anfangify(std::string str)
+  {
+    str[0] = to_upper(str[0]);
+    return str;
+  }
+  
   // min_scope_size : Allows you to ignore characters inside a scope regarded as scope_delim characters,
   //                  but then your scopes have to contain strings no shorter than this limit.
   template<typename CharT = char>
