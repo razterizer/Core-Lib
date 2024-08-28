@@ -312,7 +312,7 @@ namespace str
   }
   
   // Returns input string (noun + rest of string) with prepended indefinite article.
-  std::string indef_art(const std::string str)
+  std::string indef_art(const std::string& str)
   {
     return std::string("") + (is_an(str) ? "an" : "a") + " " + str;
   }
