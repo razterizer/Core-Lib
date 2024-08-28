@@ -289,6 +289,7 @@ namespace str
     char ch0 = strl[0];
     auto N = strl.size();
     char ch1 = N > 1 ? strl[1] : '?';
+    char ch2 = N > 2 ? strl[2] : '?';
     
     // Handling cases like "ymca".
     if (ch0 == 'y' && (N > 1 && is_vowel(ch1)))
@@ -300,7 +301,7 @@ namespace str
         return true;
 
     // Handling cases like "honest", "hour" where 'h' is silent.
-    if (ch0 == 'h' && (N > 1 && ch1 == 'o'))
+    if (ch0 == 'h' && (N > 2 && ch1 == 'o' && ch2 == 'u'))
       return true;
     
     // Handling cases like "unicorn", "unique", "use", "usage case" where 'u' sounds like "you".
