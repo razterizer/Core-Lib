@@ -25,7 +25,7 @@ namespace str
   enum class Adjustment { Left, Center, Right, LeftInteger };
   std::string adjust_str(const std::string& str, Adjustment adj, int width, int start_idx = 0, char empty_char = ' ')
   {
-    if (str.size() > width)
+    if (static_cast<int>(str.size()) > width)
       return str.substr(0, width);
     
     auto offset_str = rep_char(empty_char, start_idx);
@@ -73,10 +73,10 @@ namespace str
         //  0               s          w
         // "bla:            1234       "
         auto result = rep_char(empty_char, width);
-        for (size_t i = 0; i < std::min<int>(start_idx, number_idx); ++i)
+        for (int i = 0; i < std::min<int>(start_idx, number_idx); ++i)
           result[i] = str[i];
-        for (size_t i = 0; i < str.length(); ++i)
-          if (start_idx + i < width && number_idx + i < str.length())
+        for (int i = 0; i < static_cast<int>(str.length()); ++i)
+          if (start_idx + i < width && number_idx + i < static_cast<int>(str.length()))
             result[start_idx + i] = str[number_idx + i];
         result = result.substr(0, width);
         return result;
