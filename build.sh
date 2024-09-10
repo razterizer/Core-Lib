@@ -43,7 +43,12 @@ function build_linux_macos()
   echo $build_cmd
   $build_cmd
 
-  echo "Done."
+  if [ $? -ne 0 ]; then
+    echo "Build failed!"
+    exit 1
+  fi
+
+  echo "Build completed successfully."
 }
 
 function show_help() {
