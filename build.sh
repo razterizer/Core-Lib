@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e  # Exit immediately if a command exits with a non-zero status
+
 # Run pkg-config with the modules in the BUILD_PKG_CONFIG_MODULES environment variable, if this 
 # variable exists.
 function pkg_config_flags {
