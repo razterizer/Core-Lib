@@ -2,7 +2,7 @@
 
 This is a header-only library.
 
-![GitHub License](https://img.shields.io/github/license/razterizer/SurgSim_Lite?color=blue)
+![GitHub License](https://img.shields.io/github/license/razterizer/Core?color=blue)
 
 
 ### DateTime.h
