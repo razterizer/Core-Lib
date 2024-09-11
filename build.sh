@@ -41,9 +41,7 @@ function build_linux_macos()
   generate_clangd_compile_commands "$build_cmd" bin "$1.cpp"
 
   echo $build_cmd
-  $build_cmd
-
-  if [ $? -ne 0 ]; then
+  if ! $build_cmd; then
     echo "Build failed!"
     exit 1
   fi
