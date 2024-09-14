@@ -2,7 +2,7 @@
 
 This is a header-only library.
 
-![image](https://github.com/razterizer/Core/assets/32767250/cce64c02-0eea-42c5-a777-956468a3af81)
+![GitHub License](https://img.shields.io/github/license/razterizer/Core?color=blue)
 
 
 ### DateTime.h
