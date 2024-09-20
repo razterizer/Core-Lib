@@ -16,7 +16,6 @@
 		0723D81D2938836400C567B5 /* ann_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0732E1102934494200014375 /* ann_utils.h */; };
 		0723D81E2938836900C567B5 /* StlUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 07778F1C29298DA70020DDB0 /* StlUtils.h */; };
 		0723D81F2938836F00C567B5 /* DateTime_tests.h in Headers */ = {isa = PBXBuildFile; fileRef = 077468F5291C1DD700D54C83 /* DateTime_tests.h */; };
-		0723D8202938837300C567B5 /* MachineLearning_tests.h in Headers */ = {isa = PBXBuildFile; fileRef = 0723D8172938299300C567B5 /* MachineLearning_tests.h */; };
 		0723D822293883F600C567B5 /* Histogram_tests.h in Headers */ = {isa = PBXBuildFile; fileRef = 0723D821293883F600C567B5 /* Histogram_tests.h */; };
 		0723D8282938A33C00C567B5 /* ann_dense.h in Headers */ = {isa = PBXBuildFile; fileRef = 0723D8272938A33C00C567B5 /* ann_dense.h */; };
 		0723D82A2938C7C200C567B5 /* ann_cnn.h in Headers */ = {isa = PBXBuildFile; fileRef = 0723D8292938C7C200C567B5 /* ann_cnn.h */; };
@@ -41,7 +40,6 @@
 		0711C9E3293C140F0097F5D8 /* mnist_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mnist_utils.h; sourceTree = "<group>"; };
 		0711C9E4293C14380097F5D8 /* mnist_reader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mnist_reader.h; sourceTree = "<group>"; };
 		071F8F212924192B0052F33E /* MarkovChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkovChain.h; sourceTree = "<group>"; };
-		0723D8172938299300C567B5 /* MachineLearning_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MachineLearning_tests.h; sourceTree = "<group>"; };
 		0723D821293883F600C567B5 /* Histogram_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Histogram_tests.h; sourceTree = "<group>"; };
 		0723D8272938A33C00C567B5 /* ann_dense.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ann_dense.h; sourceTree = "<group>"; };
 		0723D8292938C7C200C567B5 /* ann_cnn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ann_cnn.h; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 			children = (
 				077468F5291C1DD700D54C83 /* DateTime_tests.h */,
 				0723D821293883F600C567B5 /* Histogram_tests.h */,
-				0723D8172938299300C567B5 /* MachineLearning_tests.h */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -198,7 +195,6 @@
 				07B17629291690F70057676B /* Math.h in Headers */,
 				0711C9E2293C13DE0097F5D8 /* mnist_reader_common.h in Headers */,
 				0723D822293883F600C567B5 /* Histogram_tests.h in Headers */,
-				0723D8202938837300C567B5 /* MachineLearning_tests.h in Headers */,
 				07B1762C291690F70057676B /* FlankDetector.h in Headers */,
 				07B17628291690F70057676B /* Physics.h in Headers */,
 				0711C9DD293BD69F0097F5D8 /* LeNet.h in Headers */,
