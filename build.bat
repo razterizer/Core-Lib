@@ -21,4 +21,4 @@ if exist "%ProgramFiles(x86)%\Microsoft Visual Studio\2022\Enterprise\VC\Auxilia
 echo Building on Windows with VC++...
 
 REM Ensure the 'bin' directory exists
-if not exist bin mkdir bin
+REM if not exist bin mkdir bin
