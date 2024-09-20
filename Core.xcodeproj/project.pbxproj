@@ -7,18 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0711C9DD293BD69F0097F5D8 /* LeNet.h in Headers */ = {isa = PBXBuildFile; fileRef = 0711C9DC293BD69F0097F5D8 /* LeNet.h */; };
-		0711C9DF293C12810097F5D8 /* MNIST_Loader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0711C9DE293C12810097F5D8 /* MNIST_Loader.h */; };
-		0711C9E2293C13DE0097F5D8 /* mnist_reader_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 0711C9E1293C13DE0097F5D8 /* mnist_reader_common.h */; };
 		0723D81A2938835400C567B5 /* Histogram.h in Headers */ = {isa = PBXBuildFile; fileRef = 0732E0C4292CE80000014375 /* Histogram.h */; };
 		0723D81B2938835800C567B5 /* StringBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 0732E0C6292D3E7300014375 /* StringBox.h */; };
 		0723D81C2938835A00C567B5 /* MarkovChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 071F8F212924192B0052F33E /* MarkovChain.h */; };
-		0723D81D2938836400C567B5 /* ann_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0732E1102934494200014375 /* ann_utils.h */; };
 		0723D81E2938836900C567B5 /* StlUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 07778F1C29298DA70020DDB0 /* StlUtils.h */; };
 		0723D81F2938836F00C567B5 /* DateTime_tests.h in Headers */ = {isa = PBXBuildFile; fileRef = 077468F5291C1DD700D54C83 /* DateTime_tests.h */; };
 		0723D822293883F600C567B5 /* Histogram_tests.h in Headers */ = {isa = PBXBuildFile; fileRef = 0723D821293883F600C567B5 /* Histogram_tests.h */; };
-		0723D8282938A33C00C567B5 /* ann_dense.h in Headers */ = {isa = PBXBuildFile; fileRef = 0723D8272938A33C00C567B5 /* ann_dense.h */; };
-		0723D82A2938C7C200C567B5 /* ann_cnn.h in Headers */ = {isa = PBXBuildFile; fileRef = 0723D8292938C7C200C567B5 /* ann_cnn.h */; };
 		07B17628291690F70057676B /* Physics.h in Headers */ = {isa = PBXBuildFile; fileRef = 07B17620291690F70057676B /* Physics.h */; };
 		07B17629291690F70057676B /* Math.h in Headers */ = {isa = PBXBuildFile; fileRef = 07B17621291690F70057676B /* Math.h */; };
 		07B1762A291690F70057676B /* StringHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 07B17622291690F70057676B /* StringHelper.h */; };
@@ -34,18 +28,10 @@
 		0709B9B02C7011EF00A43834 /* IListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IListener.h; sourceTree = "<group>"; };
 		0709B9B82C957EB400A43834 /* build.bat */ = {isa = PBXFileReference; lastKnownFileType = text; path = build.bat; sourceTree = "<group>"; };
 		070BE68C2B443FBE009D9BFB /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
-		0711C9DC293BD69F0097F5D8 /* LeNet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeNet.h; sourceTree = "<group>"; };
-		0711C9DE293C12810097F5D8 /* MNIST_Loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNIST_Loader.h; sourceTree = "<group>"; };
-		0711C9E1293C13DE0097F5D8 /* mnist_reader_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mnist_reader_common.h; sourceTree = "<group>"; };
-		0711C9E3293C140F0097F5D8 /* mnist_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mnist_utils.h; sourceTree = "<group>"; };
-		0711C9E4293C14380097F5D8 /* mnist_reader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mnist_reader.h; sourceTree = "<group>"; };
 		071F8F212924192B0052F33E /* MarkovChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkovChain.h; sourceTree = "<group>"; };
 		0723D821293883F600C567B5 /* Histogram_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Histogram_tests.h; sourceTree = "<group>"; };
-		0723D8272938A33C00C567B5 /* ann_dense.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ann_dense.h; sourceTree = "<group>"; };
-		0723D8292938C7C200C567B5 /* ann_cnn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ann_cnn.h; sourceTree = "<group>"; };
 		0732E0C4292CE80000014375 /* Histogram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Histogram.h; sourceTree = "<group>"; };
 		0732E0C6292D3E7300014375 /* StringBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringBox.h; sourceTree = "<group>"; };
-		0732E1102934494200014375 /* ann_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ann_utils.h; sourceTree = "<group>"; };
 		0739D9BE2BA1D66000964E96 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0760B6EE2B9C61E00032CACD /* Delay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Delay.h; sourceTree = "<group>"; };
 		0760B6EF2B9C8F3B0032CACD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -65,7 +51,6 @@
 		07E6EA662C06956E007BBC6B /* StlOperators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StlOperators.h; sourceTree = "<group>"; };
 		07E6EA672C077F5D007BBC6B /* FolderHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FolderHelper.h; sourceTree = "<group>"; };
 		07E6EA7B2C0A5C0F007BBC6B /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		07E6EAA82C114451007BBC6B /* LICENSE_mnist */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE_mnist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,38 +82,6 @@
 			name = scripts;
 			sourceTree = "<group>";
 		};
-		0711C9E0293C13970097F5D8 /* MNIST */ = {
-			isa = PBXGroup;
-			children = (
-				0711C9E5293C14460097F5D8 /* wichtounet_mnist_reader */,
-				0711C9DE293C12810097F5D8 /* MNIST_Loader.h */,
-			);
-			path = MNIST;
-			sourceTree = "<group>";
-		};
-		0711C9E5293C14460097F5D8 /* wichtounet_mnist_reader */ = {
-			isa = PBXGroup;
-			children = (
-				07E6EAA82C114451007BBC6B /* LICENSE_mnist */,
-				0711C9E1293C13DE0097F5D8 /* mnist_reader_common.h */,
-				0711C9E3293C140F0097F5D8 /* mnist_utils.h */,
-				0711C9E4293C14380097F5D8 /* mnist_reader.h */,
-			);
-			path = wichtounet_mnist_reader;
-			sourceTree = "<group>";
-		};
-		0723D8232938A07B00C567B5 /* MachineLearning */ = {
-			isa = PBXGroup;
-			children = (
-				0732E1102934494200014375 /* ann_utils.h */,
-				0723D8272938A33C00C567B5 /* ann_dense.h */,
-				0723D8292938C7C200C567B5 /* ann_cnn.h */,
-				0711C9DC293BD69F0097F5D8 /* LeNet.h */,
-				0711C9E0293C13970097F5D8 /* MNIST */,
-			);
-			path = MachineLearning;
-			sourceTree = "<group>";
-		};
 		0723D8262938A15900C567B5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +105,6 @@
 				07B17621291690F70057676B /* Math.h */,
 				07B17627291690F70057676B /* OneShot.h */,
 				07B17620291690F70057676B /* Physics.h */,
-				0723D8232938A07B00C567B5 /* MachineLearning */,
 				07B17623291690F70057676B /* Rand.h */,
 				07778F1C29298DA70020DDB0 /* StlUtils.h */,
 				07E6EA662C06956E007BBC6B /* StlOperators.h */,
@@ -186,22 +138,16 @@
 			files = (
 				0723D81A2938835400C567B5 /* Histogram.h in Headers */,
 				0723D81E2938836900C567B5 /* StlUtils.h in Headers */,
-				0723D82A2938C7C200C567B5 /* ann_cnn.h in Headers */,
 				0723D81B2938835800C567B5 /* StringBox.h in Headers */,
 				0723D81F2938836F00C567B5 /* DateTime_tests.h in Headers */,
 				07B1762A291690F70057676B /* StringHelper.h in Headers */,
 				07B1762B291690F70057676B /* Rand.h in Headers */,
-				0723D8282938A33C00C567B5 /* ann_dense.h in Headers */,
 				07B17629291690F70057676B /* Math.h in Headers */,
-				0711C9E2293C13DE0097F5D8 /* mnist_reader_common.h in Headers */,
 				0723D822293883F600C567B5 /* Histogram_tests.h in Headers */,
 				07B1762C291690F70057676B /* FlankDetector.h in Headers */,
 				07B17628291690F70057676B /* Physics.h in Headers */,
-				0711C9DD293BD69F0097F5D8 /* LeNet.h in Headers */,
 				07B1762D291690F70057676B /* Uuid.h in Headers */,
-				0723D81D2938836400C567B5 /* ann_utils.h in Headers */,
 				0723D81C2938835A00C567B5 /* MarkovChain.h in Headers */,
-				0711C9DF293C12810097F5D8 /* MNIST_Loader.h in Headers */,
 				07B1762E291690F70057676B /* DateTime.h in Headers */,
 				07B1762F291690F70057676B /* OneShot.h in Headers */,
 			);
