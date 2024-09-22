@@ -96,7 +96,7 @@ namespace hist
       rebuild();
     }
     
-    StringBox to_stringbox(int nr, int nc)
+    str::StringBox to_stringbox(int nr, int nc)
     {
       auto hist = *this;
       hist.resize(nc, range_start, range_end);
@@ -111,7 +111,7 @@ namespace hist
         auto t = static_cast<float>(buck.samples.size())/max_num_samples;
         hist_bars[b_idx] = std::round(t * nr);
       }
-      StringBox sb(nr);
+      str::StringBox sb(nr);
       for (int r_idx = nr - 1; r_idx >= 0; --r_idx)
       {
         auto& str = sb[r_idx];
