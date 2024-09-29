@@ -54,7 +54,7 @@
 		07E6EA7B2C0A5C0F007BBC6B /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		07FDE9762CA003E600116BA7 /* build_unit_tests.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_unit_tests.sh; sourceTree = "<group>"; };
 		07FDE9772CA003E600116BA7 /* unit_tests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unit_tests.cpp; sourceTree = "<group>"; };
-		07FDE97A2CA0059100116BA7 /* build-ubuntu.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = "build-ubuntu.yml"; path = ".github/workflows/build-ubuntu.yml"; sourceTree = "<group>"; };
+		07FDE97A2CA0059100116BA7 /* build-and-test-ubuntu.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = "build-and-test-ubuntu.yml"; path = ".github/workflows/build-and-test-ubuntu.yml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,7 @@
 		07FDE9792CA0052500116BA7 /* workflows */ = {
 			isa = PBXGroup;
 			children = (
-				07FDE97A2CA0059100116BA7 /* build-ubuntu.yml */,
+				07FDE97A2CA0059100116BA7 /* build-and-test-ubuntu.yml */,
 			);
 			name = workflows;
 			sourceTree = "<group>";
