@@ -628,7 +628,7 @@ namespace stlutils
   typename Cont::value_type try_get(const Cont& cont, int idx,
                                     typename Cont::value_type def_val = static_cast<typename Cont::value_type>(0))
   {
-    if (idx < cont.size())
+    if (idx < static_cast<int>(cont.size()))
       return cont[idx];
     return def_val;
   }
