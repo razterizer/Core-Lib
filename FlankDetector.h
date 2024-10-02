@@ -38,3 +38,9 @@ public:
   bool curr() const { return curr_val; }
   bool prev() const { return prev_val; }
 };
+
+template<>
+bool FlankDetector<bool>::pos_flank(bool threshold) const { return static_cast<int>(curr_val) > static_cast<int>(prev_val) + static_cast<int>(threshold); }
+template<>
+bool FlankDetector<bool>::neg_flank(bool threshold) const { return static_cast<int>(curr_val) < static_cast<int>(prev_val) - static_cast<int>(threshold); }
+
