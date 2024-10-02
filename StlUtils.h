@@ -12,6 +12,7 @@
 #include <assert.h>
 #include <algorithm>
 #include <functional>
+#include <type_traits>
 
 
 namespace stlutils
@@ -20,7 +21,11 @@ namespace stlutils
   template<typename Cont>
   void memset(Cont& c, typename Cont::value_type val)
   {
-    std::memset(c.data(), val, c.size() * sizeof(typename Cont::value_type));
+    if constexpr (std::is_trivial_v<typename Cont::value_type>)
+      std::memset(c.data(), val, c.size() * sizeof(typename Cont::value_type));
+    else
+      std::fill(c.begin(), c.end(), val);
+    }
   }
 
   template<typename Cont>
