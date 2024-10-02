@@ -25,7 +25,6 @@ namespace stlutils
       std::memset(c.data(), val, c.size() * sizeof(typename Cont::value_type));
     else
       std::fill(c.begin(), c.end(), val);
-    }
   }
 
   template<typename Cont>
