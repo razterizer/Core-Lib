@@ -145,8 +145,8 @@ namespace datetime
     }
   
   public:
-    day_t(const month_t& m, int day) : month(&m), datetime_unit_t(day) {}
-    day_t(const month_t& m, const day_t& day) : month(&m), datetime_unit_t(day) {}
+    day_t(const month_t& m, int day) : datetime_unit_t(day), month(&m) {}
+    day_t(const month_t& m, const day_t& day) : datetime_unit_t(day), month(&m) {}
     
     void operator=(const day_t& day)
     {
