@@ -646,5 +646,14 @@ namespace stlutils
       vec.resize(idx + 1, default_val);
     return vec[idx];
   }
+  
+  // static_cast<int>(apa.size());
+  // vs
+  // stlutils::sizeI(apa);
+  template<typename Cont>
+  int sizeI(const Cont& c)
+  {
+    return static_cast<int>(std::size(c));
+  }
 
 }
