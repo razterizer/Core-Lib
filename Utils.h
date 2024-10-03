@@ -12,6 +12,11 @@
 
 namespace utils
 {
+  
+  constexpr int operator"" _i(long double x)
+  {
+    return static_cast<int>(x);
+  }
 
   template<typename T>
   bool try_set(T* dst, const T& src)
