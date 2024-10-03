@@ -651,7 +651,7 @@ namespace stlutils
   // vs
   // stlutils::sizeI(apa);
   template<typename Cont>
-  int sizeI(const Cont& c)
+  constexpr int sizeI(const Cont& c) noexcept
   {
     return static_cast<int>(std::size(c));
   }
