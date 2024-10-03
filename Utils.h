@@ -13,9 +13,12 @@
 namespace utils
 {
   
-  constexpr int operator"" _i(long double x)
+  namespace literals
   {
-    return static_cast<int>(x);
+    constexpr int operator"" _i(long double x)
+    {
+      return static_cast<int>(x);
+    }
   }
 
   template<typename T>
