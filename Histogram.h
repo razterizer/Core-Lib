@@ -55,7 +55,7 @@ namespace hist
       {
         val_prev = val_curr;
         val_curr = val_curr + step;
-        if (buck_idx++ == num_buckets - 1 && std::abs(val_curr - range_end) < 1e-4f)
+        if (buck_idx++ == static_cast<int>(num_buckets) - 1 && std::abs(val_curr - range_end) < 1e-4f)
           val_curr = range_end;
         buck.start = val_prev;
         buck.end = val_curr;
