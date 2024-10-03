@@ -39,7 +39,7 @@ namespace hist
       auto& buck = buckets[b_idx];
       if (s < buck.start && b_idx > 0)
         buckets[b_idx - 1].samples.emplace_back(s);
-      else if (s > buck.end && b_idx < num_buckets - 1)
+      else if (s > buck.end && b_idx < static_cast<int>(num_buckets) - 1)
         buckets[b_idx + 1].samples.emplace_back(s);
       else
         buck.samples.emplace_back(s);
