@@ -105,7 +105,7 @@ namespace hist
         math::maximize(max_num_samples, buck.samples.size());
       std::vector<int> hist_bars;
       hist_bars.resize(nc);
-      for (int b_idx = 0; b_idx < hist.num_buckets; ++b_idx)
+      for (int b_idx = 0; b_idx < static_cast<int>(hist.num_buckets); ++b_idx)
       {
         const auto& buck = hist.buckets[b_idx];
         auto t = static_cast<float>(buck.samples.size())/max_num_samples;
