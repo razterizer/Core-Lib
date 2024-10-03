@@ -71,7 +71,7 @@ namespace hist
     
   public:
     Histogram(size_t N_buck, T start, T end)
-      : num_buckets(std::max(N_buck, 1_sz)), range_start(start), range_end(end)
+      : range_start(start), range_end(end), num_buckets(std::max(N_buck, 1_sz))
     {
       buckets.resize(num_buckets);
       
