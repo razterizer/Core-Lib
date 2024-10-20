@@ -3,6 +3,7 @@
 This is a header-only library.
 
 ![GitHub License](https://img.shields.io/github/license/razterizer/Core?color=blue)
+![Static Badge](https://img.shields.io/badge/linkage-header_only-yellow)
 
 [![build and test ubuntu](https://github.com/razterizer/Core/actions/workflows/build-and-test-ubuntu.yml/badge.svg)](https://github.com/razterizer/Core/actions/workflows/build-and-test-ubuntu.yml)
 
