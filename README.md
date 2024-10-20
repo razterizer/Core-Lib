@@ -1,7 +1,5 @@
 # Core Lib
 
-This is a header-only library.
-
 ![GitHub License](https://img.shields.io/github/license/razterizer/Core?color=blue)
 ![Static Badge](https://img.shields.io/badge/linkage-header_only-yellow)
 
@@ -14,6 +12,8 @@ This is a header-only library.
 ![Last Commit](https://img.shields.io/github/last-commit/razterizer/Core?color=blue)
 ![Contributors](https://img.shields.io/github/contributors/razterizer/Core?color=blue)
 <!-- ![Languages](https://img.shields.io/github/languages/count/razterizer/Core) -->
+
+This is a cross-platform, header-only library for core routines.
 
 ### DateTime.h
 
