@@ -320,10 +320,10 @@ namespace math
   }
 
   template<typename T>
-  T get_max() { return std::is_floating_point_v<T> ? std::numeric_limits<T>::infinity() : std::numeric_limits<T>::max(); }
+  constexpr T get_max() { return std::is_floating_point_v<T> ? std::numeric_limits<T>::infinity() : std::numeric_limits<T>::max(); }
 
   template<typename T>
-  T get_min() { return std::is_floating_point_v<T> ? -std::numeric_limits<T>::infinity() : std::numeric_limits<T>::min(); }
+  constexpr T get_min() { return std::is_floating_point_v<T> ? -std::numeric_limits<T>::infinity() : std::numeric_limits<T>::min(); }
 
   template<typename T>
   bool is_eps(T v, T eps = std::numeric_limits<T>::epsilon())
