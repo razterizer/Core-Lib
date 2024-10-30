@@ -30,6 +30,7 @@
 		0709B9B82C957EB400A43834 /* build.bat */ = {isa = PBXFileReference; lastKnownFileType = text; path = build.bat; sourceTree = "<group>"; };
 		070BE68C2B443FBE009D9BFB /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		070C60CB2CD280FB00BC7F51 /* Vec2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vec2.h; sourceTree = "<group>"; };
+		070C60CC2CD2B36500BC7F51 /* Mtx2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mtx2.h; sourceTree = "<group>"; };
 		071F8F212924192B0052F33E /* MarkovChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkovChain.h; sourceTree = "<group>"; };
 		0723D821293883F600C567B5 /* Histogram_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Histogram_tests.h; sourceTree = "<group>"; };
 		0732E0C4292CE80000014375 /* Histogram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Histogram.h; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 				07B17624291690F70057676B /* FlankDetector.h */,
 				07B17621291690F70057676B /* Math.h */,
 				070C60CB2CD280FB00BC7F51 /* Vec2.h */,
+				070C60CC2CD2B36500BC7F51 /* Mtx2.h */,
 				07B17627291690F70057676B /* OneShot.h */,
 				07B17620291690F70057676B /* Physics.h */,
 				07B17623291690F70057676B /* Rand.h */,
