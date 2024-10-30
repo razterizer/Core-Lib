@@ -18,14 +18,13 @@
 // | cr  cc |
 // \        /
 
-class Mtx2
+struct Mtx2
 {
   float m00 = 1.f;
   float m01 = 0.f;
   float m10 = 0.f;
   float m11 = 1.f;
   
-public:
   Mtx2() = default;
 
   Mtx2(float v00, float v01, float v10, float v11)
