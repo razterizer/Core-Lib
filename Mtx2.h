@@ -20,12 +20,14 @@
 
 class Mtx2
 {
-  float m00 = 0.f;
+  float m00 = 1.f;
   float m01 = 0.f;
   float m10 = 0.f;
-  float m11 = 0.f;
+  float m11 = 1.f;
   
 public:
+  Mtx2() = default;
+
   Mtx2(float v00, float v01, float v10, float v11)
     : m00(v00)
     , m01(v01)
