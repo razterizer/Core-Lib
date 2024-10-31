@@ -31,6 +31,7 @@
 		070BE68C2B443FBE009D9BFB /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		070C60CB2CD280FB00BC7F51 /* Vec2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vec2.h; sourceTree = "<group>"; };
 		070C60CC2CD2B36500BC7F51 /* Mtx2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mtx2.h; sourceTree = "<group>"; };
+		070C60CD2CD3EA6300BC7F51 /* Benchmark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Benchmark.h; sourceTree = "<group>"; };
 		071F8F212924192B0052F33E /* MarkovChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkovChain.h; sourceTree = "<group>"; };
 		0723D821293883F600C567B5 /* Histogram_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Histogram_tests.h; sourceTree = "<group>"; };
 		0732E0C4292CE80000014375 /* Histogram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Histogram.h; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 				07FDE9792CA0052500116BA7 /* workflows */,
 				07B17626291690F70057676B /* DateTime.h */,
 				0760B6EE2B9C61E00032CACD /* Delay.h */,
+				070C60CD2CD3EA6300BC7F51 /* Benchmark.h */,
 				0732E0C4292CE80000014375 /* Histogram.h */,
 				0732E0C6292D3E7300014375 /* StringBox.h */,
 				071F8F212924192B0052F33E /* MarkovChain.h */,
