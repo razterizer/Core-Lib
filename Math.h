@@ -201,6 +201,25 @@ namespace math
   }
   
   template<typename T>
+  T dot(T x0, T y0, T x1, T y1)
+  {
+    return x0*x1 + y0*y1;
+  }
+  
+  template<typename T>
+  T dot(T x0, T y0, T z0, T x1, T y1, T z1)
+  {
+    return x0*x1 + y0*y1 + z0*z1;
+  }
+  
+  template<typename T>
+  T dot(T x0, T y0, T z0, T w0, T x1, T y1, T z1, T w1)
+  {
+    return x0*x1 + y0*y1 + z0*z1 + w0*w1;
+  }
+
+  
+  template<typename T>
   T clamp(T val, T lo, T hi)
   {
     if (val < lo)
