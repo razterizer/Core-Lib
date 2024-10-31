@@ -78,3 +78,21 @@ struct Vec2
     return "(" + std::to_string(r) + ", " + std::to_string(c) + ")";
   }
 };
+
+namespace math
+{
+  
+  Vec2 normalize(const Vec2& v)
+  {
+    auto ret = v;
+    if (!normalize(ret.r, ret.c))
+      return {};
+    return ret;
+  }
+  
+  float dot(const Vec2& vA, const Vec2& vB)
+  {
+    return dot(vA.r, vA.c, vB.r, vB.c);
+  }
+  
+}
