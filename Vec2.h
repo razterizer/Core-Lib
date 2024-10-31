@@ -6,6 +6,7 @@
 //
 
 #pragma once
+#include "Math.h"
 #include <string>
 
 
