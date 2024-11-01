@@ -27,6 +27,20 @@ namespace benchmark
     return elapsed_time.count();
   }
   
+  std::chrono::time_point<std::chrono::steady_clock> benchmark_tictoc_time;
+  
+  void tic()
+  {
+    benchmark_tictoc_time = std::chrono::steady_clock::now();
+  }
+  
+  float toc()
+  {
+    auto end_time = std::chrono::steady_clock::now();
+    std::chrono::duration<float, std::milli> elapsed_time = end_time - benchmark_tictoc_time;
+    return elapsed_time.count();
+  }
+  
   class Benchmark
   {
     std::map<std::string, float> timers_ms;
