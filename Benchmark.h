@@ -6,8 +6,8 @@
 //
 
 #pragma once
+#include "StringHelper.h"
 #include <chrono>
-#include <string>
 #include <map>
 
 
@@ -31,8 +31,19 @@ class Benchmark
   
   void print()
   {
+    int max_tag_len = 0;
+    int max_time_len = 0;
     for (const auto& [tag, time_ms] : timers_ms)
-      std::cout << tag << ": " << time_ms << " ms" << std::endl;
+    {
+      math::maximize(max_tag_len, static_cast<int>(tag.size()));
+      math::maximize(max_time_len, static_cast<int>(std::to_string(time_ms).size()));
+    }
+    
+    for (const auto& [tag, time_ms] : timers_ms)
+      std::cout << str::adjust_str(tag, str::Adjustment::Left, max_tag_len)
+        << " : "
+        << str::adjust_str(std::to_string(time_ms), str::Adjustment::Left, max_time_len)
+        << " ms" << std::endl;
   }
   
 public:
