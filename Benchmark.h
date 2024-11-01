@@ -27,12 +27,25 @@ float calc_time_ms(Lambda&& func)
 class Benchmark
 {
   std::map<std::string, float> timers_ms;
+  std::map<std::string, std::chrono::steady_clock::time_point> start_times;
   
 public:
   template<typename Lambda>
   void reg(Lambda&& func, const std::string& tag)
   {
     timers_ms[tag] = calc_time_ms(func);
+  }
+  
+  void start(const std::string& tag)
+  {
+    start_times[tag] = std::chrono::steady_clock::now();
+  }
+  
+  void stop(const std::string& tag)
+  {
+    auto end_time = std::chrono::steady_clock::now();
+    std::chrono::duration<float, std::milli> elapsed_time = end_time - start_times[tag];
+    timers_ms[tag] += elapsed_time.count();
   }
   
   void print()
