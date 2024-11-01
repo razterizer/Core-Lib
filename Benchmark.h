@@ -39,11 +39,30 @@ class Benchmark
       math::maximize(max_time_len, static_cast<int>(std::to_string(time_ms).size()));
     }
     
+    std::vector<std::string> lines;
     for (const auto& [tag, time_ms] : timers_ms)
-      std::cout << str::adjust_str(tag, str::Adjustment::Left, max_tag_len)
-        << " : "
-        << str::adjust_str(std::to_string(time_ms), str::Adjustment::Left, max_time_len)
-        << " ms" << std::endl;
+      lines.emplace_back(str::adjust_str(tag, str::Adjustment::Left, max_tag_len)
+        + " : "
+        + str::adjust_str(std::to_string(time_ms), str::Adjustment::Left, max_time_len)
+        + " ms");
+    
+    // ##################
+    // #   Benchmark    #
+    // ##################
+    // # .............. #
+    // # .............. #
+    // ##################
+    
+    if (lines.empty())
+      return;
+    auto frame_width = static_cast<int>(lines.back().size() + 4);
+    auto horiz_str = str::rep_char('#', frame_width);
+    std::cout << horiz_str << std::endl;
+    std::cout << "# " << str::adjust_str("BENCHMARK", str::Adjustment::Center, frame_width - 3) << " #" << std::endl;
+    std::cout << horiz_str << std::endl;
+    for (const auto& l : lines)
+      std::cout << "# " << l << " #" << std::endl;
+    std::cout << horiz_str << std::endl;
   }
   
 public:
