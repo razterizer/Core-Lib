@@ -33,7 +33,7 @@ public:
   template<typename Lambda>
   void reg(Lambda&& func, const std::string& tag)
   {
-    timers_ms[tag] = calc_time_ms(func);
+    timers_ms[tag] += calc_time_ms(func);
   }
   
   void start(const std::string& tag)
