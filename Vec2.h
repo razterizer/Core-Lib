@@ -87,6 +87,16 @@ Vec2 operator*(float v, const Vec2& p)
 namespace math
 {
   
+  float length_squared(const Vec2& pt)
+  {
+    return length_squared(pt.r, pt.c);
+  }
+  
+  float length(const Vec2& pt)
+  {
+    return length(pt.r, pt.c);
+  }
+  
   Vec2 normalize(const Vec2& v)
   {
     auto ret = v;
