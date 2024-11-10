@@ -79,6 +79,11 @@ struct Vec2
   }
 };
 
+Vec2 operator*(float v, const Vec2& p)
+{
+  return { p.r * v, p.c * v };
+}
+
 namespace math
 {
   
