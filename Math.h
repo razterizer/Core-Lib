@@ -276,6 +276,13 @@ namespace math
     auto t = value_to_param<T0>(val_0, start_0, end_0);
     return lerp<T1>(t, start_1, end_1);
   }
+  
+  template<typename T0, typename T1>
+  T1 linmap_clamped(T0 val_0, T0 start_0, T0 end_0, T1 start_1, T1 end_1)
+  {
+    auto t = value_to_param<T0>(val_0, start_0, end_0);
+    return clamp(lerp<T1>(t, start_1, end_1), start_1, end_1);
+  }
 
   template<typename T>
   bool in_range(T val, std::optional<T> start, std::optional<T> end, Range type)
