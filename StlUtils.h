@@ -544,6 +544,18 @@ namespace stlutils
     return std::count(arr.begin(), arr.end(), val);
   }
   
+  template<typename T, typename Lambda>
+  size_t count_if(const std::vector<T>& vec, Lambda&& pred)
+  {
+    return std::count_if(vec.begin(), vec.end(), pred);
+  }
+  
+  template<typename T, size_t N, typename Lambda>
+  size_t count_if(const std::array<T, N>& arr, Lambda&& pred)
+  {
+    return std::count_if(arr.begin(), arr.end(), pred);
+  }
+  
   template<typename Cont>
   void sort(Cont& c)
   {
