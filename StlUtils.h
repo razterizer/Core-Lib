@@ -65,6 +65,18 @@ namespace stlutils
       ret += sum(r);
     return ret;
   }
+  
+  template<typename Cont>
+  Cont diff(const Cont& c)
+  {
+    auto n = sizeI(c);
+    if (n < 2)
+      return {};
+    Cont c_diff(n - 1);
+    for (int i = 1; i < n; ++i)
+      c_diff[i - 1] = c[i] - c[i - 1];
+    return c_diff;
+  }
 
   template<typename Cont, typename RetT>
   RetT average(const Cont& c)
