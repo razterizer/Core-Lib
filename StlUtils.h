@@ -625,6 +625,12 @@ namespace stlutils
     return std::find_if(std::begin(c), std::end(c), pred) != std::end(c);
   }
   
+  template<typename Iterator, typename Lambda>
+  bool contains_if(const Iterator it_begin, const Iterator it_end, Lambda pred)
+  {
+    return std::find_if(it_begin, it_end, pred) != it_end;
+  }
+  
   template<typename Cont>
   bool contains(const Cont& c, const typename Cont::value_type& val)
   {
