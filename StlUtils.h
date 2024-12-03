@@ -18,6 +18,15 @@
 namespace stlutils
 {
 
+  // static_cast<int>(apa.size());
+  // vs
+  // stlutils::sizeI(apa);
+  template<typename Cont>
+  constexpr int sizeI(const Cont& c) noexcept
+  {
+    return static_cast<int>(std::size(c));
+  }
+
   template<typename Cont>
   void memset(Cont& c, typename Cont::value_type val)
   {
@@ -657,15 +666,6 @@ namespace stlutils
     if (idx >= static_cast<int>(vec.size()))
       vec.resize(idx + 1, default_val);
     return vec[idx];
-  }
-  
-  // static_cast<int>(apa.size());
-  // vs
-  // stlutils::sizeI(apa);
-  template<typename Cont>
-  constexpr int sizeI(const Cont& c) noexcept
-  {
-    return static_cast<int>(std::size(c));
   }
 
 }
