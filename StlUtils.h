@@ -638,6 +638,28 @@ namespace stlutils
   }
   
   template<typename Cont>
+  bool emplace_back_unique(Cont& c, const typename Cont::value_type& val)
+  {
+    if (!contains(c, val))
+    {
+      c.emplace_back(val);
+      return true;
+    }
+    return false;
+  }
+  
+  template<typename Cont, typename Lambda>
+  bool emplace_back_if_not(Cont& c, const typename Cont::value_type& val, Lambda pred)
+  {
+    if (!contains_if(c, pred))
+    {
+      c.emplace_back(val);
+      return true;
+    }
+    return false;
+  }
+  
+  template<typename Cont>
   void erase(Cont& c, const typename Cont::value_type& val)
   {
     c.erase(find(c, val));
