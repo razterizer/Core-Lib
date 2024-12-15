@@ -97,6 +97,16 @@ namespace math
     return length(pt.r, pt.c);
   }
   
+  float distance_squared(const Vec2& ptA, const Vec2& ptB)
+  {
+    return distance_squared(ptA.r, ptA.c, ptB.r, ptB.c);
+  }
+  
+  float distance(const Vec2& ptA, const Vec2& ptB)
+  {
+    return distance(ptA.r, ptA.c, ptB.r, ptB.c);
+  }
+  
   Vec2 normalize(const Vec2& v)
   {
     auto ret = v;
